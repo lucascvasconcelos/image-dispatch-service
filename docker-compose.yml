@@ -1,15 +1,11 @@
-version: '3.8'
-
 services:
   api:
     build: .
-    container_name: image-dispatch-api
+    container_name: image-dispatch-service
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/imagedispatch
-      SPRING_DATASOURCE_USERNAME: postgres
-      SPRING_DATASOURCE_PASSWORD: postgres
+      SPRING_PROFILES_ACTIVE: docker
     depends_on:
       - db
 
@@ -17,7 +13,7 @@ services:
     image: postgres:15
     container_name: image-dispatch-db
     environment:
-      POSTGRES_DB: imagedispatch
+      POSTGRES_DB: image_dispatch
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:

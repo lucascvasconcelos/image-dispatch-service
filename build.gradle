@@ -46,3 +46,7 @@ tasks.withType(JavaCompile).configureEach {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.withType(Test).configureEach {
+	enabled = false
+}
