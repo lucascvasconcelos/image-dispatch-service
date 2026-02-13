@@ -1,7 +1,6 @@
 package com.br.image.image_dispatch_service.presentation.controller;
 
 import com.br.image.image_dispatch_service.application.usecase.imagedispatch.DocumentDispatchUseCase;
-import com.br.image.image_dispatch_service.domain.imagedispatch.repository.DocumentDispatchRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
