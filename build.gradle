@@ -36,6 +36,10 @@ dependencies {
 	// Banco de dados
 	runtimeOnly 'org.postgresql:postgresql'
 	runtimeOnly 'com.h2database:h2'
+
+	implementation(platform("software.amazon.awssdk:bom:2.25.55"))
+	implementation("software.amazon.awssdk:s3")
+
 }
 
 tasks.withType(JavaCompile).configureEach {

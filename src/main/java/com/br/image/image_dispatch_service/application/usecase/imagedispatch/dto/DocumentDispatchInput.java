@@ -4,4 +4,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 public record DocumentDispatchInput(
         MultipartFile file
-) {}
+) {
+
+}
