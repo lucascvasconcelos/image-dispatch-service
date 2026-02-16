@@ -42,9 +42,11 @@ public class DocumentDispatchUseCaseImpl implements DocumentDispatchUseCase {
             log.info("✅ Upload concluído | s3Url={}", "url");
 
             List<String> recipients = List.of(
-                    "suyanefarmacia@gmail.com",
+                    "marcelo.cologneze@segurosunimed.com.br",
                     "lks.lucasvasconcelos@gmail.com",
-                    "mclaracontact@gmail.com"
+                    "mclaracontact@gmail.com",
+                    "leonardo.nascimento.rgr@segurosunimed.com.br",
+                    "andre.souza@segurosunimed.com.br"
             );
 
             log.info("📧 Iniciando envio de emails | totalDestinatarios={}", recipients.size());
@@ -53,7 +55,8 @@ public class DocumentDispatchUseCaseImpl implements DocumentDispatchUseCase {
                 smtpEmailSender.send(
                         email,
                         "Documento enviado",
-                        "Seu documento foi enviado com sucesso.\nURL: " + "url"
+                        "Seu documento foi enviado com sucesso.\nURL: " + "url",
+                        file
                 );
 
                 log.info("📨 Email enviado com sucesso | to={}", email);
