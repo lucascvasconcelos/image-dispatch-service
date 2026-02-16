@@ -26,8 +26,7 @@ public class DocumentDispatchEntity {
 
     private Instant createdAt;
 
-    public DocumentDispatchEntity(UUID id, String fileName, String s3Url, Instant createdAt) {
-        this.id = id;
+    public DocumentDispatchEntity(String fileName, String s3Url, Instant createdAt) {
         this.fileName = fileName;
         this.s3Url = s3Url;
         this.createdAt = createdAt;

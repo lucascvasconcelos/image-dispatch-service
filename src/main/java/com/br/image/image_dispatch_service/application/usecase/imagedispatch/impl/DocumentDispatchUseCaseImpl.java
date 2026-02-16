@@ -15,7 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.time.Instant;
 import java.util.List;
-import java.util.UUID;
 
 @Log4j2
 @Service
@@ -59,11 +58,13 @@ public class DocumentDispatchUseCaseImpl implements DocumentDispatchUseCase {
 
                 log.info("📨 Email enviado com sucesso | to={}", email);
             }
-            DocumentDispatch document =
-                    new DocumentDispatch(UUID.randomUUID(), file.getOriginalFilename(), "url", Instant.now());
+
+            DocumentDispatch document = new DocumentDispatch(
+                    file.getOriginalFilename(), "url", Instant.now()
+            );
 
             DocumentDispatchEntity documentEntity = new DocumentDispatchEntity(
-                    UUID.randomUUID(), file.getOriginalFilename(), "url", document.getCreatedAt()
+                    file.getOriginalFilename(), "url", document.getCreatedAt()
             );
             repository.save(documentEntity);
 
@@ -75,5 +76,5 @@ public class DocumentDispatchUseCaseImpl implements DocumentDispatchUseCase {
             );
         }
     }
-
 }
+

@@ -19,8 +19,7 @@ public class DocumentDispatch {
 
     private Instant createdAt;
 
-    public DocumentDispatch(UUID id, String fileName, String s3Url, Instant createdAt) {
-        this.id = id;
+    public DocumentDispatch(String fileName, String s3Url, Instant createdAt) {
         this.fileName = fileName;
         this.s3Url = s3Url;
         this.createdAt = createdAt;

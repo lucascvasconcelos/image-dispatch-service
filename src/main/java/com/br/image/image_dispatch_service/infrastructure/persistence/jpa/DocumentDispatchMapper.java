@@ -27,7 +27,6 @@ public class DocumentDispatchMapper {
         }
 
         return new DocumentDispatch(
-                entity.getId(),
                 entity.getFileName(),
                 entity.getS3Url(),
                 entity.getCreatedAt()
