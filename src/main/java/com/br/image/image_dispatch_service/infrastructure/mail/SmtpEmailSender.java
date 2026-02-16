@@ -1,5 +1,6 @@
 package com.br.image.image_dispatch_service.infrastructure.mail;
 
+import com.br.image.image_dispatch_service.domain.imagedispatch.exceptions.DocumentDispatchGeneralException;
 import com.br.image.image_dispatch_service.domain.mail.EmailSender;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -18,17 +19,16 @@ public class SmtpEmailSender implements EmailSender {
     public void send(String to, String subject, String body) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
+
             message.setTo(to);
             message.setSubject(subject);
             message.setText(body);
-
             mailSender.send(message);
 
             log.info("Email enviado com sucesso. to={}", to);
-
         } catch (Exception ex) {
             log.error("Erro ao enviar email", ex);
-            throw new RuntimeException("Falha ao enviar email");
+            throw new DocumentDispatchGeneralException("Falha ao enviar email");
         }
     }
 }
