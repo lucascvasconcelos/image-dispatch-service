@@ -1,5 +1,4 @@
 # 📦 Image Dispatch Service
-
 Serviço responsável por **receber imagens**, **armazenar no Amazon S3**, **enviar notificação por e-mail** e **persistir os dados do dispatch**.
 
 O projeto segue **boas práticas de Clean Architecture**, separando domínio, casos de uso, infraestrutura e camada de apresentação.
@@ -7,7 +6,6 @@ O projeto segue **boas práticas de Clean Architecture**, separando domínio, ca
 
 ---
 ## 🧱 Tecnologias utilizadas
-
 - **API**: Spring Boot (Java 17)
 - **Banco de Dados**: PostgreSQL 15
 - **Armazenamento**: Amazon S3
@@ -18,7 +16,6 @@ O projeto segue **boas práticas de Clean Architecture**, separando domínio, ca
 ![img.png](img.png)
 
 ## 🚀 Funcionalidades
-
 - Upload de imagem via API REST
 - Armazenamento do arquivo no Amazon S3
 - Envio de e-mail de notificação (SMTP ou AWS SES)
@@ -27,9 +24,7 @@ O projeto segue **boas práticas de Clean Architecture**, separando domínio, ca
 - Arquitetura limpa e desacoplada
 
 ---
-
 ## 🧱 Arquitetura
-
 O fluxo principal segue a ordem:
 
 **Controller → UseCase → S3 → Email → Banco**
@@ -39,12 +34,11 @@ O fluxo principal segue a ordem:
 - **S3Service**: faz upload do arquivo
 - **EmailSender**: envia notificação
 - **Repository**: persiste os dados
-
 ---
 
 ## 📂 Estrutura do Projeto
-
 ```text
+
 src/main/java/com/br/image/image_dispatch_service
 ├── domain
 │   ├── imagedispatch
