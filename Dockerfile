@@ -1,4 +1,3 @@
-# ===== STAGE 1 - BUILD =====
 FROM eclipse-temurin:17-jdk-jammy AS build
 
 WORKDIR /build
@@ -11,7 +10,6 @@ COPY src ./src
 RUN chmod +x gradlew
 RUN ./gradlew clean build -x test
 
-# ===== STAGE 2 - RUNTIME =====
 FROM eclipse-temurin:17-jre-jammy
 
 WORKDIR /app

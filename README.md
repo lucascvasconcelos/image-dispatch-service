@@ -3,8 +3,19 @@
 Serviço responsável por **receber imagens**, **armazenar no Amazon S3**, **enviar notificação por e-mail** e **persistir os dados do dispatch**.
 
 O projeto segue **boas práticas de Clean Architecture**, separando domínio, casos de uso, infraestrutura e camada de apresentação.
+---
 
 ---
+## 🧱 Tecnologias utilizadas
+
+- **API**: Spring Boot (Java 17)
+- **Banco de Dados**: PostgreSQL 15
+- **Armazenamento**: Amazon S3
+- **Email**: SMTP
+- **Containerização**: Docker + Docker Compose
+---
+
+![img.png](img.png)
 
 ## 🚀 Funcionalidades
 
