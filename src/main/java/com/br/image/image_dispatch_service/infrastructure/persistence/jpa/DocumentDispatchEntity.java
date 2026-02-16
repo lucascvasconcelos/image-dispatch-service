@@ -26,9 +26,6 @@ public class DocumentDispatchEntity {
 
     private Instant createdAt;
 
-    @Version
-    private Long version;
-
     public DocumentDispatchEntity(UUID id, String fileName, String s3Url, Instant createdAt) {
         this.id = id;
         this.fileName = fileName;

@@ -1,7 +1,6 @@
 package com.br.image.image_dispatch_service.domain.imagedispatch.model;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +9,6 @@ import java.util.UUID;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class DocumentDispatch {
 
     private UUID id;
@@ -21,4 +19,10 @@ public class DocumentDispatch {
 
     private Instant createdAt;
 
+    public DocumentDispatch(UUID id, String fileName, String s3Url, Instant createdAt) {
+        this.id = id;
+        this.fileName = fileName;
+        this.s3Url = s3Url;
+        this.createdAt = createdAt;
+    }
 }
