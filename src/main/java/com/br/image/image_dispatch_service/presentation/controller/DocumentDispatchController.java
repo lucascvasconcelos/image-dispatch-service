@@ -19,7 +19,6 @@ public class DocumentDispatchController {
     public ResponseEntity<Void> dispatchDocument(
             @RequestParam("file") MultipartFile file
     ) {
-
         useCase.dispatch(file);
 
         log.info("Recebida requisição para dispatch de documento. fileName={}, size={} bytes, contentType={}",

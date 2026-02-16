@@ -43,9 +43,9 @@ public class DocumentDispatchUseCaseImpl implements DocumentDispatchUseCase {
             log.info("✅ Upload concluído | s3Url={}", "url");
 
             List<String> recipients = List.of(
-                    "marcelo.cologneze@segurosunimed.com.br",
-                    "leonardo.nascimento.rgr@segurosunimed.com.br",
-                    "andre.souza@segurosunimed.com.br"
+                    "suyanefarmacia@gmail.com",
+                    "lks.lucasvasconcelos@gmail.com",
+                    "mclaracontact@gmail.com"
             );
 
             log.info("📧 Iniciando envio de emails | totalDestinatarios={}", recipients.size());
